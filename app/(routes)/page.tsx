@@ -1,11 +1,13 @@
-import LinkList from "../_components/LinkList";
+import { BestSellerList, Header } from "@/_components";
 
 const page = () => {
   return (
-    <section>
-      <h1>The New York Times Best Seller Explorer</h1>
-      <LinkList />
-    </section>
+    <>
+      <Header />
+      <main>
+        <BestSellerList />
+      </main>
+    </>
   );
 };
 

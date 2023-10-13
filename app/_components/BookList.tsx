@@ -1,32 +1,33 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BookListInfo, BookListResults } from "../_types";
-import { getBookList } from "../_api";
+import { usePathname } from "next/navigation";
+import Header from "./Header";
+import { BookListResults } from "@/_types";
+import { getBookList } from "@/_api";
+import { mainContainer } from "@/_styles";
 
-interface BookListProp {
-  id: string;
-}
-
-const BookList = ({ id }: BookListProp) => {
+const BookList = () => {
+  const [, , id] = usePathname().split("/");
   const [bookList, setBookList] = useState<BookListResults>();
-  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     (async () => {
       const { results } = await (await getBookList(id)).json();
       setBookList(results);
-      setIsLoading(true);
     })();
   }, [id]);
   return (
     <>
-      {isLoading && (
+      <Header />
+      <main>
+        <h1>{bookList?.list_name}</h1>
         <ul>
           {bookList?.books?.map((item) => (
-            <li key={item.amazon_product_url}>{item.title}</li>
+            <li key={item.primary_isbn13}>{item.title}</li>
           ))}
         </ul>
-      )}
+      </main>
+      <style jsx>{mainContainer}</style>
     </>
   );
 };

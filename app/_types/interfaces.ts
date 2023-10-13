@@ -13,10 +13,10 @@ enum Updated {
 }
 
 export interface BookListInfo {
-  results?: Results;
+  results?: BookListResults;
 }
 
-export interface Results {
+export interface BookListResults {
   list_name: string;
   list_name_encoded: string;
   bestsellers_date: Date;

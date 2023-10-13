@@ -1,24 +1,20 @@
-import { getBookList } from "@/app/_api";
-import BookList from "@/app/_components/BookList";
-import { BookListInfo } from "@/app/_types";
+import { getBestSellerList } from "@/_api";
+import { BookList, Header } from "@/_components";
+import { BestSellersListInfo } from "@/_types";
 
-interface generateMetadataProps {
-  params: { id: string };
-}
+export const dynamicParams = false;
 
-export const generateMetadata = async ({ params }: generateMetadataProps) => {
-  const id = params.id;
-  const { results }: BookListInfo = await (await getBookList(id)).json();
-  return {
-    title: results?.display_name,
-  };
+export const generateStaticParams = async () => {
+  const { results } = await (await getBestSellerList()).json();
+  return results.map((item: BestSellersListInfo) => ({
+    id: item.list_name_encoded,
+  }));
 };
 
-const page = ({ params }: generateMetadataProps) => {
-  const id = params.id;
+const page = () => {
   return (
     <>
-      <BookList id={id} />
+      <BookList />
     </>
   );
 };

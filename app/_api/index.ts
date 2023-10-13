@@ -1,4 +1,4 @@
-import { BASE_URL } from "../_types";
+import { BASE_URL } from "@/_types";
 
 export const getBestSellerList = () => {
   return fetch(`${BASE_URL}/lists`, { cache: "no-store" });

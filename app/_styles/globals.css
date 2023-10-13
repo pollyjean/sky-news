@@ -6,6 +6,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --handwrite-border: 2px solid rgb(var(--foreground-rgb));
+  --handwrite-box: 20px 38px 34px -26px rgb(var(--foreground-rgb));
+  --handwrite-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +21,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+a {
+  display: block;
 }
