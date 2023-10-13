@@ -3,7 +3,7 @@ import css from "styled-jsx/css";
 export const listBorder = css`
   li {
     border: var(--handwrite-border);
-    box-shadow: var(--handwrite-box);
+    box-shadow: var(--handwrite-box), 2px 2px 10px rgba(var(--foreground-rgb), 0.2);
     border-radius: var(--handwrite-radius);
   }
 `;

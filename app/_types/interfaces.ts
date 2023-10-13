@@ -46,10 +46,10 @@ export interface Book {
   author: string;
   contributor: string;
   contributor_note: string;
-  book_image: null | string;
-  book_image_width: number | null;
-  book_image_height: number | null;
-  amazon_product_url: null | string;
+  book_image: undefined | string;
+  book_image_width: number | undefined;
+  book_image_height: number | undefined;
+  amazon_product_url: undefined | string;
   age_group: string;
   book_review_link: string;
   first_chapter_link: string;
