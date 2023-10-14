@@ -1,8 +1,8 @@
 import "../_styles/globals.css";
 import type { Metadata } from "next";
-import { Shantell_Sans } from "next/font/google";
+import { Quicksand } from "next/font/google";
 
-const handWriting = Shantell_Sans({
+const handWriting = Quicksand({
   weight: ["400", "600"],
   subsets: ["latin"],
 });

@@ -24,18 +24,20 @@ const Header = () => {
             z-index: 1;
             display: flex;
             padding: 1rem;
-            justify-content: space-between;
+            justify-content: space-around;
             font-size: 1.5rem;
-            border-bottom: 3px solid rgba(var(--foreground-rgb), 0.65);
+            border-bottom: 1px solid rgba(var(--foreground-rgb), 0.1);
             border-radius: 2px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: rgba(var(--background-end-rgb), 1);
           }
           menu .active {
-            opacity: 0.8;
+            opacity: 1;
+            font-weight: bold;
           }
           menu li {
             border-bottom: 3px solid rgba(var(--foreground-rgb), 0);
-            opacity: 0.6;
+            opacity: 0.7;
           }
           menu li:hover {
             border-bottom: 3px solid rgba(var(--foreground-rgb), 0.8);

@@ -60,7 +60,7 @@ export interface Book {
   book_uri: string;
 }
 
-interface BuyLink {
+export interface BuyLink {
   name: Name;
   url: string;
 }

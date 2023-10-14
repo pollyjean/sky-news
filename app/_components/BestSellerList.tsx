@@ -27,7 +27,7 @@ const BestSellerList = () => {
           ul {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.5rem 1rem;
+            gap: 2.5rem 2rem;
           }
         `}</style>
         <style jsx>{mainContainer}</style>

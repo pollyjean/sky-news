@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Header from "./Header";
 import { BookListResults } from "@/_types";
 import { getBookList } from "@/_api";
 import { mainContainer } from "@/_styles";
+import Header from "./Header";
 import BookItem from "./BookItem";
 
 const BookList = () => {
@@ -31,8 +31,8 @@ const BookList = () => {
       <style jsx>{`
         ul {
           display: grid;
-          grid-template-columns: 4fr 4fr 4fr 4fr;
-          gap: 1rem;
+          grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+          gap: 2.5rem 2rem;
         }
       `}</style>
       <style jsx>{mainContainer}</style>
