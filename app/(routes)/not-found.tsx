@@ -1,6 +1,4 @@
-"use client";
 import Link from "next/link";
-import { mainContainer } from "../_styles";
 
 export default function NotFound() {
   return (
@@ -10,7 +8,6 @@ export default function NotFound() {
         <p>Could not find requested resource</p>
         <Link href="/">Return Home</Link>
       </main>
-      <style jsx>{mainContainer}</style>
     </>
   );
 }

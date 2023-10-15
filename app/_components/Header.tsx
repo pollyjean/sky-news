@@ -20,28 +20,27 @@ const Header = () => {
       <style jsx>
         {`
           menu {
+            display: flex;
+            padding: 1.5rem;
+            justify-content: space-around;
             position: relative;
             z-index: 1;
-            display: flex;
-            padding: 1rem;
-            justify-content: space-around;
-            font-size: 1.5rem;
-            border-bottom: 1px solid rgba(var(--foreground-rgb), 0.1);
-            border-radius: 2px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            background-color: rgba(var(--background-end-rgb), 1);
+            border-bottom: 1px solid rgba(var(--paper-color), 0.3);
+            box-shadow: 0 0 1rem rgba(var(--paper-color), 1), inset 0 0.25rem 0.25rem rgba(var(--paper-color), 1);
           }
           menu .active {
             opacity: 1;
             font-weight: bold;
           }
           menu li {
-            border-bottom: 3px solid rgba(var(--foreground-rgb), 0);
-            opacity: 0.7;
+            border-bottom: 2px solid rgba(var(--ink-color), 0);
+            line-height: 1.3;
+            opacity: 0.8;
+            transition: 0.1s ease-in all;
           }
           menu li:hover {
-            border-bottom: 3px solid rgba(var(--foreground-rgb), 0.8);
-            border-radius: 3px;
+            border-bottom: 2px solid rgba(var(--ink-color), 0.8);
+            border-radius: 2px;
           }
         `}
       </style>

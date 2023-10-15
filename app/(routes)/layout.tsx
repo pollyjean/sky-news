@@ -1,9 +1,9 @@
 import "../_styles/globals.css";
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 
-const handWriting = Quicksand({
-  weight: ["400", "600"],
+const handWriting = Playfair_Display({
+  weight: ["400", "500"],
   subsets: ["latin"],
 });
 

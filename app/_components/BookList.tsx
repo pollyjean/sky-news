@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { BookListResults } from "@/_types";
 import { getBookList } from "@/_api";
-import { mainContainer } from "@/_styles";
 import Header from "./Header";
 import BookItem from "./BookItem";
 
@@ -21,7 +20,6 @@ const BookList = () => {
     <>
       <Header />
       <main>
-        <h1>{bookList?.list_name}</h1>
         <ul>
           {bookList?.books?.map((item) => (
             <BookItem key={item.primary_isbn13} {...item} />
@@ -35,7 +33,6 @@ const BookList = () => {
           gap: 2.5rem 2rem;
         }
       `}</style>
-      <style jsx>{mainContainer}</style>
     </>
   );
 };

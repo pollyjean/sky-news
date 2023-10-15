@@ -1,7 +1,4 @@
-"use client";
-
 import { Header } from "@/_components";
-import { mainContainer } from "@/_styles";
 
 const page = () => {
   return (
@@ -15,7 +12,6 @@ const page = () => {
           We hope you enjoy your stay!
         </p>
       </main>
-      <style jsx>{mainContainer}</style>
     </>
   );
 };

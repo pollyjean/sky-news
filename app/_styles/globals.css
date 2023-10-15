@@ -3,27 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --handwrite-border: 2px solid rgb(var(--foreground-rgb));
-  --handwrite-box: 20px 38px 34px -26px rgb(var(--foreground-rgb));
-  --handwrite-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 24, 24, 24;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --ink-color: 16, 17, 4;
+  --paper-color: 229, 207, 185;
+  --paper-shadow: 211, 192, 171;
+  --paper-margin: 3rem;
+  --paragraph-margin: 1rem;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-start-rgb));
+  color: rgba(var(--ink-color), 0.8);
+  background: linear-gradient(rgba(var(--paper-color), 0.4), rgba(var(--paper-shadow), 0.4));
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  line-height: 1.7;
 }
 
 a {
   display: block;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  max-width: 80rem;
+  width: 95%;
+  min-height: 80vh;
+  margin: 0 auto 6rem auto;
+  padding: 0 var(--paper-margin) var(--paper-margin) var(--paper-margin);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(var(--paper-color), 0.1);
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  text-align: center;
+  padding: var(--paper-margin);
+  color: rgba(var(--ink-color), 1);
+}
+p {
+  padding-top: var(--paragraph-margin);
 }

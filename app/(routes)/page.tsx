@@ -5,6 +5,10 @@ const page = () => {
     <>
       <Header />
       <main>
+        <h1>
+          The New York Times
+          <br /> Best Seller Explorer
+        </h1>
         <BestSellerList />
       </main>
     </>

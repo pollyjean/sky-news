@@ -1,6 +1,5 @@
 "use client";
 
-import { listBorder } from "@/_styles";
 import { BuyLink } from "@/_types";
 import Link from "next/link";
 
@@ -30,9 +29,6 @@ const BuyBookLayer = ({ buyLinks }: BuyBookLayerProps) => {
           background-color: rgba(var(--background-end-rgb), 1);
           border: 2px solid rgba(var(--foreground-rgb), 1);
           box-shadow: 4px 4px 12px rgba(var(--foreground-rgb), 0.6);
-          @media (prefers-color-scheme: dark) {
-            box-shadow: none;
-          }
           border-radius: 0 1rem 1rem 1rem;
           padding: 0.5rem;
           width: 15rem;
@@ -52,12 +48,8 @@ const BuyBookLayer = ({ buyLinks }: BuyBookLayerProps) => {
         }
         li:hover {
           box-shadow: 3px 3px 10px rgba(var(--foreground-rgb), 0.6);
-          @media (prefers-color-scheme: dark) {
-            box-shadow: 3px 3px 10px rgba(var(--foreground-rgb), 0.6);
-          }
         }
       `}</style>
-      <style jsx>{listBorder}</style>
     </>
   );
 };

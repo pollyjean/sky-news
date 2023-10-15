@@ -9,8 +9,8 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
   }, [error]);
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
+    <main>
+      <h1>Something went wrong!</h1>
       <button
         onClick={
           // Attempt to recover by trying to re-render the segment
@@ -19,6 +19,6 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
       >
         Try again
       </button>
-    </div>
+    </main>
   );
 }
