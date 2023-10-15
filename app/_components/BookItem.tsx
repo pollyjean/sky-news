@@ -57,15 +57,18 @@ const BookItem = (props: Book) => {
           font-weight: bold;
         }
         h2 {
+          color: rgba(var(--ink-color), 1);
           font-size: 1.5rem;
-          letter-spacing: -1px;
+          font-weight: 500;
+          letter-spacing: -0.5px;
           text-align: center;
           font-weight: bolder;
           padding: var(--paragraph-margin);
           line-height: 1;
         }
         h3 {
-          font-size: 0.9rem;
+          font-size: 1rem;
+          letter-spacing: 0.5px;
           padding: 0 var(--paragraph-margin) var(--paragraph-margin);
           line-height: 1;
           border-bottom: 1px solid rgba(var(--ink-color), 0.2);
@@ -74,12 +77,13 @@ const BookItem = (props: Book) => {
         p {
           font-size: 1.25rem;
           padding: var(--paragraph-margin);
-          letter-spacing: 0.5px;
+          letter-spacing: 0.75px;
           line-height: 1.5;
         }
         p em {
           display: block;
-          font-size: 0.95rem;
+          font-size: 1rem;
+          opacity: 0.6;
         }
         li.rank-1 {
           grid-column: 1 / 3;
@@ -98,6 +102,9 @@ const BookItem = (props: Book) => {
         button {
           margin-top: 0.5rem;
           padding: 0 1rem;
+        }
+        button:hover {
+          text-decoration: underline;
         }
       `}</style>
       <style jsx global>{`

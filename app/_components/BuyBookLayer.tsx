@@ -29,9 +29,8 @@ const BuyBookLayer = ({ buyLinks }: BuyBookLayerProps) => {
           z-index: 2;
           top: 3.2rem;
           left: 3.4rem;
-          background-color: rgba(var(--paper-color), 1);
-          border: 2px solid rgba(var(--ink-color), 1);
-          box-shadow: 4px 4px 12px rgba(var(--ink-color), 0.6);
+          background-color: #fff;
+          box-shadow: 4px 4px 1rem rgba(var(--ink-color), 0.6);
           border-radius: 0 1rem 1rem 1rem;
           padding: 0.5rem;
           width: 16rem;
@@ -39,14 +38,15 @@ const BuyBookLayer = ({ buyLinks }: BuyBookLayerProps) => {
         ul:before {
           content: "";
           position: absolute;
-          top: -22px;
-          left: -2px;
+          top: -20px;
+          left: 0px;
           width: 0;
           height: 0;
           border: 10px solid transparent;
-          border-bottom: 10px solid rgba(var(--ink-color), 1);
+          border-bottom: 10px solid #fff;
         }
         li {
+          border-radius: 0.75rem;
           padding: 0.25rem 0.5rem;
         }
       `}</style>
