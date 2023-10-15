@@ -20,6 +20,7 @@ const BookList = () => {
     <>
       <Header />
       <main>
+        <h1>{bookList?.list_name}</h1>
         <ul>
           {bookList?.books?.map((item) => (
             <BookItem key={item.primary_isbn13} {...item} />
@@ -29,7 +30,7 @@ const BookList = () => {
       <style jsx>{`
         ul {
           display: grid;
-          grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+          grid-template-columns: 4fr 4fr 4fr 4fr;
           gap: 2.5rem 2rem;
         }
       `}</style>

@@ -35,7 +35,7 @@ const Header = () => {
           menu li {
             border-bottom: 2px solid rgba(var(--ink-color), 0);
             line-height: 1.3;
-            opacity: 0.8;
+            opacity: 0.95;
             transition: 0.1s ease-in all;
           }
           menu li:hover {

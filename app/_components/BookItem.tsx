@@ -6,6 +6,7 @@ import { Book } from "@/_types";
 import { checkForRankingChanges } from "@/_utilities";
 import { useState } from "react";
 import BuyBookLayer from "./BuyBookLayer";
+import { listBox } from "@/_styles";
 
 const BookItem = (props: Book) => {
   const [buyLayer, setBuyLayer] = useState(false);
@@ -37,58 +38,51 @@ const BookItem = (props: Book) => {
           </div>
         )}
       </li>
+      <style jsx>{listBox}</style>
       <style jsx>{`
         li {
-          padding: 0.5rem 0 2rem 0;
-          box-shadow: 3px 3px 9px rgba(var(--background-start-rgb), 1),
-            inset 0 0 15px rgba(var(--background-start-rgb), 1);
-          border-radius: 3rem 4px 4px 4px;
-          border: 1px solid rgba(var(--foreground-rgb), 0.3);
-          background-color: rgba(var(--background-end-rgb), 1);
+          border-radius: 4px var(--paragraph-margin) 4px 4px;
+          padding: 0 0 var(--paragraph-margin) 0;
         }
         li span {
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
           gap: 1rem;
-          font-size: 0.9rem;
+          padding: 0 var(--paragraph-margin);
+          border-bottom: 1px solid rgba(var(--ink-color), 0.4);
         }
         li span b {
-          font-size: 1.3rem;
+          font-size: 2rem;
           font-weight: bold;
         }
         h2 {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
           letter-spacing: -1px;
-          margin-bottom: 3px;
           text-align: center;
           font-weight: bolder;
-          padding: 0.5rem 1rem;
+          padding: var(--paragraph-margin);
           line-height: 1;
         }
         h3 {
           font-size: 0.9rem;
-          padding: 0 1rem 0.5rem 1rem;
-          margin-bottom: 0.5rem;
+          padding: 0 var(--paragraph-margin) var(--paragraph-margin);
           line-height: 1;
-          border-bottom: 1px solid rgba(var(--foreground-rgb), 0.4);
+          border-bottom: 1px solid rgba(var(--ink-color), 0.2);
           text-align: center;
         }
         p {
-          font-size: 0.9rem;
-          padding: 0 1rem;
+          font-size: 1.25rem;
+          padding: var(--paragraph-margin);
           letter-spacing: 0.5px;
           line-height: 1.5;
         }
         p em {
           display: block;
-          font-size: 0.8rem;
+          font-size: 0.95rem;
         }
         li.rank-1 {
           grid-column: 1 / 3;
-        }
-        li.rank-2 {
-          grid-column: 3 / 5;
         }
         li div {
           position: relative;
@@ -99,7 +93,7 @@ const BookItem = (props: Book) => {
         li figure {
           display: flex;
           justify-content: center;
-          margin: 0.5rem 0;
+          margin: 0;
         }
         button {
           margin-top: 0.5rem;
