@@ -1,5 +1,5 @@
 import { getBestSellerList } from "@/_api";
-import { BookList, Header } from "@/_components";
+import { BookList } from "@/_components";
 import { BestSellersListInfo } from "@/_types";
 
 export const dynamicParams = false;

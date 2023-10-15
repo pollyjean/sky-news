@@ -44,3 +44,13 @@ h1 {
 p {
   padding-top: var(--paragraph-margin);
 }
+
+header menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  border-bottom: 1px solid transparent;
+}
+menu li {
+  line-height: 1.3;
+}

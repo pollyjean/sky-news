@@ -16,6 +16,11 @@ const LinkButton = ({ link, name }: LinkButtonProps) => {
       </li>
       <style jsx>{listBox}</style>
       <style jsx>{listBoxLink}</style>
+      <style jsx global>{`
+        main li a {
+          padding: 1rem 1.2rem;
+        }
+      `}</style>
     </>
   );
 };

@@ -3,7 +3,6 @@ import css from "styled-jsx/css";
 export const listBox = css`
   li {
     position: relative;
-    padding: 1rem 1.2rem;
     font-size: 1.3rem;
     font-weight: 500;
     letter-spacing: -0.25px;

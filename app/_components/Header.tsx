@@ -20,9 +20,6 @@ const Header = () => {
       <style jsx>
         {`
           menu {
-            display: flex;
-            padding: 1.5rem;
-            justify-content: space-around;
             position: relative;
             z-index: 1;
             border-bottom: 1px solid rgba(var(--paper-color), 0.3);
