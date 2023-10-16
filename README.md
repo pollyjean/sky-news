@@ -33,3 +33,6 @@ Next.js 로 SSR, 서버라우팅, API 가져오기, styled-jsx 사용해보기
 - 로딩 스켈레톤
 - 각 출판사 링크에 아이콘 사용(enum 활용)
 - 메타 데이터, fav icon 사용
+- 밑줄 긋기 효과
+- 리스트 소팅
+- Weekly / Monthly 구분
